@@ -105,13 +105,13 @@ MetaCommandResult do_meta_command(InputBuffer* input_buffer, Table *table) {
 }
 
 // Function to prepare SQL insert statements
-PrepareResult prepare_insert(InputBuffer* input_buffer, Statement* statement) {
+PrepareResult prepare_insert(InputBuffer *input_buffer, Statement *statement) {
     statement->type = STATEMENT_INSERT;
 
-    char* keyword = strtok(input_buffer->buffer, " ");
-    char* id_string = strtok(NULL, " ");
-    char* username = strtok(NULL, " ");
-    char* email = strtok(NULL, " ");
+    char *keyword = strtok(input_buffer->buffer, " ");
+    char *id_string = strtok(NULL, " ");
+    char *username = strtok(NULL, " ");
+    char *email = strtok(NULL, " ");
 
     if (id_string == NULL || username == NULL || email == NULL) {
         return PREPARE_SYNTAX_ERROR; // Not enough arguments
@@ -136,7 +136,7 @@ PrepareResult prepare_insert(InputBuffer* input_buffer, Statement* statement) {
 }
 
 // Function to prepare SQL statements
-PrepareResult prepare_statement(InputBuffer* input_buffer, Statement* statement) {
+PrepareResult prepare_statement(InputBuffer *input_buffer, Statement *statement) {
     if (strncmp(input_buffer->buffer, "insert", 6) == 0) {
         return prepare_insert(input_buffer, statement);
     }
