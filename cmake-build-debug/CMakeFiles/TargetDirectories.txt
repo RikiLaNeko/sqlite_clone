@@ -1,0 +1,3 @@
+/home/dedsec/CLionProjects/sqlite_clone/cmake-build-debug/CMakeFiles/sqlite_clone.dir
+/home/dedsec/CLionProjects/sqlite_clone/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/dedsec/CLionProjects/sqlite_clone/cmake-build-debug/CMakeFiles/rebuild_cache.dir
